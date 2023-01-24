@@ -33,7 +33,7 @@
           <p>
             <a href="#01" data-lity="data-lity">
               <div>
-                <img src="./img/thumbnail .jpg" alt="サムネイル" />
+                <img src="./img/thumbnail-b.jpg" alt="サムネイル" />
               </div>
             </a>
           </p>
@@ -44,13 +44,13 @@
                 周囲の状況、音量にご注意ください。
               </div>
               <a
-                href="./video/video_640*360.mp4"
+                href="./video/video_b_640*360.mp4"
                 target="_blank"
                 rel="noopener"
               >
                 <p class="play-wrap">
                   <i class="fa-solid fa-circle-play"></i>
-                  <img src="./img/thumbnail .jpg" alt="サムネイル" />
+                  <img src="./img/thumbnail-b.jpg" alt="サムネイル" />
                 </p>
               </a>
               <div class="content-description">
@@ -63,26 +63,26 @@
         </li>
         <li>
           <p>
-            <a href="#01" data-lity="data-lity">
+            <a href="#02" data-lity="data-lity">
               <div>
-                <img src="./img/thumbnail .jpg" alt="サムネイル" />
+                <img src="./img/thumbnail-g.jpg" alt="サムネイル" />
               </div>
             </a>
           </p>
-          <div id="01" class="lity-hide">
+          <div id="02" class="lity-hide">
             <div class="content-space">
               <div class="notes">
                 ※クリックすると再生が始まります。<br />
                 周囲の状況、音量にご注意ください。
               </div>
               <a
-                href="./video/video_640*360.mp4"
+                href="./video/video_g_640*360.mp4"
                 target="_blank"
                 rel="noopener"
               >
                 <p class="play-wrap">
                   <i class="fa-solid fa-circle-play"></i>
-                  <img src="./img/thumbnail .jpg" alt="サムネイル" />
+                  <img src="./img/thumbnail-g.jpg" alt="サムネイル" />
                 </p>
               </a>
               <div class="content-description">
@@ -101,26 +101,20 @@
     <!-- thumbnails  -->
     <div id="usingVanilla.js" class="wrapper">
       <h2>Using Vanilla.js</h2>
-      <ul class="contents-wrap">
-        <li class="content-cell">
-          <div>
-            <img src="./img/thumbnail .jpg" alt="サムネイル" />
-          </div>
-          <div></div>
-        </li>
-      </ul>
+      <ul id="contentsWrap" class="contents-wrap"></ul>
+    </div>
 
-      <!-- modal window  -->
-      <div id="modal" class="open">
-        <div class="content-space">
+    <!-- modal window  -->
+    <div id="modal">
+      <div class="content-space">
         <div class="notes">
           ※クリックすると再生が始まります。<br />
           周囲の状況、音量にご注意ください。
         </div>
-        <a href="./video/video_640*360.mp4" target="_blank" rel="noopener">
+        <a id="videoLink" href="" target="_blank" rel="noopener">
           <p class="play-wrap">
             <i class="fa-solid fa-circle-play"></i>
-            <img src="./img/thumbnail .jpg" alt="サムネイル" />
+            <img id="imgLink" src="" alt="サムネイル" />
           </p>
         </a>
         <div class="content-description">
@@ -129,8 +123,14 @@
           <a href="./index.html"> TOPページ </a>
         </div>
       </div>
+      <!-- close btn -->
+      <div id="closeBtn">
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </div>
-    </div>
+    <!--//modal window  -->
+
     <!-- <div id="foo"></div>
     <script>
       $(function(){
