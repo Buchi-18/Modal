@@ -4,7 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pop up</title>
+    <title>Modal</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/vanilla-js.css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- jquery-3.6.3 -->
     <script
       src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
@@ -13,11 +23,122 @@
     ></script>
   </head>
   <body>
-    <a href="#" data-lity="data-lity">
-      <div>
-        <img src="./img/thumbnail .jpg" alt="movie" />
+    <!-- ********** ********** ********** -->
+    <!-- ********** Using lity ********** -->
+    <!-- ********** ********** ********** -->
+    <div id="usingLity" class="wrapper">
+      <h2>Using lity</h2>
+      <ul class="contents-wrap">
+        <li>
+          <p>
+            <a href="#01" data-lity="data-lity">
+              <div>
+                <img src="./img/thumbnail .jpg" alt="サムネイル" />
+              </div>
+            </a>
+          </p>
+          <div id="01" class="lity-hide">
+            <div class="content-space">
+              <div class="notes">
+                ※クリックすると再生が始まります。<br />
+                周囲の状況、音量にご注意ください。
+              </div>
+              <a
+                href="./video/video_640*360.mp4"
+                target="_blank"
+                rel="noopener"
+              >
+                <p class="play-wrap">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <img src="./img/thumbnail .jpg" alt="サムネイル" />
+                </p>
+              </a>
+              <div class="content-description">
+                <p class="content-date">2023.01.24</p>
+                <p class="content-title">テスト動画テスト動画テスト動画</p>
+                <a href="./index.html"> TOPページ </a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <p>
+            <a href="#01" data-lity="data-lity">
+              <div>
+                <img src="./img/thumbnail .jpg" alt="サムネイル" />
+              </div>
+            </a>
+          </p>
+          <div id="01" class="lity-hide">
+            <div class="content-space">
+              <div class="notes">
+                ※クリックすると再生が始まります。<br />
+                周囲の状況、音量にご注意ください。
+              </div>
+              <a
+                href="./video/video_640*360.mp4"
+                target="_blank"
+                rel="noopener"
+              >
+                <p class="play-wrap">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <img src="./img/thumbnail .jpg" alt="サムネイル" />
+                </p>
+              </a>
+              <div class="content-description">
+                <p class="content-date">2023.01.24</p>
+                <p class="content-title">テスト動画テスト動画テスト動画</p>
+                <a href="./index.html"> TOPページ </a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- ********** ********** ********** -->
+    <!-- ********** vanilla.js ********** -->
+    <!-- ********** ********** ********** -->
+    <!-- thumbnails  -->
+    <div id="usingVanilla.js" class="wrapper">
+      <h2>Using Vanilla.js</h2>
+      <ul class="contents-wrap">
+        <li class="content-cell">
+          <div>
+            <img src="./img/thumbnail .jpg" alt="サムネイル" />
+          </div>
+          <div></div>
+        </li>
+      </ul>
+
+      <!-- modal window  -->
+      <div id="modal" class="open">
+        <div class="content-space">
+        <div class="notes">
+          ※クリックすると再生が始まります。<br />
+          周囲の状況、音量にご注意ください。
+        </div>
+        <a href="./video/video_640*360.mp4" target="_blank" rel="noopener">
+          <p class="play-wrap">
+            <i class="fa-solid fa-circle-play"></i>
+            <img src="./img/thumbnail .jpg" alt="サムネイル" />
+          </p>
+        </a>
+        <div class="content-description">
+          <p class="content-date">2023.01.24</p>
+          <p class="content-title">テスト動画テスト動画テスト動画</p>
+          <a href="./index.html"> TOPページ </a>
+        </div>
       </div>
-    </a>
+    </div>
+    </div>
+    <!-- <div id="foo"></div>
+    <script>
+      $(function(){
+        $("#foo").append("<h1>foo</h1>")
+        $("#foo").append("<h1>foo</h1>")
+        $("#foo").append("<h1>foo</h1>")
+      })
+    </script> -->
 
     <!--  ポップアップ  -->
     <link
@@ -26,5 +147,7 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/1.6.6/lity.js"></script>
     <!--  ポップアップ  -->
+
+    <script src="./js/vanilla.js"></script>
   </body>
 </html>
