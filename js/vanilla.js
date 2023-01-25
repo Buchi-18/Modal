@@ -16,11 +16,12 @@ const videos = [
   },
 ];
 
+const modalBg = document.querySelector(".modal-bg");
 const contentsWrap = document.getElementById("contentsWrap");
 const modal = document.getElementById("modal");
-const closeBtn = document.getElementById("closeBtn");
 const videoLink = document.getElementById("videoLink");
 const imgLink = document.getElementById("imgLink");
+const closeBtn = document.getElementById("closeBtn");
 
 // 配列videosのデータの数、サムネイル（li.content-cell）を追加
 videos.forEach(function (video) {
@@ -36,18 +37,43 @@ videos.forEach(function (video) {
 
 // クリックしたサムネイルのdataIdから、表示するデータを取得しモーダルを表示
 document.querySelectorAll(".content-cell").forEach(function (cell) {
-  cell.addEventListener("click", function (e) {
-    modal.classList.add("open");
+  cell.addEventListener("click", function () {
     const id = cell.dataset.id;
-    const { videoUrl, imgUrl, alt, title } = videos[id];
-    videoLink.setAttribute("href", videoUrl);
-    imgLink.setAttribute("src", imgUrl);
-    imgLink.setAttribute("alt", alt);
-    imgLink.setAttribute("alt", title);
+    modalIsOpen(id);
   });
 });
-
 // クローズボタンクリックでモーダルを閉じる
-closeBtn.addEventListener("click", function () {
-  modal.classList.remove("open");
+document.body.addEventListener("click", (e) => {
+  const isClick = e.target.className;
+  if (modal.className === isClick || closeBtn.className === isClick) {
+    modalIsClose();
+  }
 });
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    modalIsClose();
+  }
+});
+
+//モーダルオープンメソッド
+function modalIsOpen(id) {
+  modal.classList.add("open");
+  modalBg.classList.add("open");
+  modal.classList.remove("closed");
+  modalBg.classList.remove("closed");
+  const { videoUrl, imgUrl, alt, title } = videos[id];
+  videoLink.setAttribute("href", videoUrl);
+  imgLink.setAttribute("src", imgUrl);
+  imgLink.setAttribute("alt", alt);
+  imgLink.setAttribute("alt", title);
+}
+//モーダルクローズメソッド
+function modalIsClose() {
+  modal.classList.add("closed");
+  modalBg.classList.add("closed");
+  setTimeout(function () {
+    modal.classList.remove("open");
+    modalBg.classList.remove("open");
+  }, 200);
+}
