@@ -119,4 +119,8 @@ img {
   .content-title {
     font-size: 0.8rem;
   }
+  #closeBtn .bar {
+    width: 20px;
+    height: 2px;
+  }
 }
