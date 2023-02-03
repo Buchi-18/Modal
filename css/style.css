@@ -94,14 +94,33 @@ img {
 /* スマホ */
 /* ******************** */
 @media screen and (max-width: 750px) {
+  h2 {
+    font-size: 1.15rem;
+  }
   .wrapper {
     width: var(--width-sp);
   }
   .contents-wrap {
     flex-direction: column;
-    margin-bottom: 8%;
   }
-  .contents-wrap li {
-    padding: 2% 5%;
+  .content-space {
+    width: 92vw;
+  }
+  .content-space .fa-circle-play {
+    font-size: 3rem;
+  }
+  .content-space a,
+  .notes {
+    font-size: 0.6rem;
+  }
+  .content-date {
+    font-size: 0.5rem;
+  }
+  .content-title {
+    font-size: 0.8rem;
+  }
+  #closeBtn .bar {
+    width: 20px;
+    height: 2px;
   }
 }
