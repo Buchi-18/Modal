@@ -41,6 +41,7 @@ img {
 }
 .contents-wrap{
   display: flex;
+  justify-content: center;
 }
 .contents-wrap li{
   padding: 5%;
