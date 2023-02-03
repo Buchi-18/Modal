@@ -23,11 +23,12 @@
     ></script>
   </head>
   <body>
+    <h1 style="margin: 5% 0; text-align: center">MODAL SCRIPT</h1>
     <!-- ********** ********** ********** -->
     <!-- ********** Using lity ********** -->
     <!-- ********** ********** ********** -->
     <div id="usingLity" class="wrapper">
-      <h2>Using lity</h2>
+      <h2 style="font-size: 1.5rem">Using lity</h2>
       <ul class="contents-wrap">
         <li>
           <p>
@@ -100,15 +101,16 @@
     <!-- ********** ********** ********** -->
     <!-- thumbnails  -->
     <div id="usingVanilla.js" class="wrapper">
-      <h2>Using Vanilla.js</h2>
+      <h2 style="font-size: 1.5rem">Using Vanilla.js</h2>
       <ul id="contentsWrap" class="contents-wrap"></ul>
     </div>
 
     <!-- modal window  -->
+    <div class="modal-bg"></div>
     <div id="modal">
       <div class="content-space">
         <div class="notes">
-          ※クリックすると再生が始まります。<br />
+          ※動画をクリックすると再生が始まります。<br />
           周囲の状況、音量にご注意ください。
         </div>
         <a id="videoLink" href="" target="_blank" rel="noopener">
@@ -123,31 +125,21 @@
           <a href="./index.html"> TOPページ </a>
         </div>
       </div>
-      <!-- close btn -->
-      <div id="closeBtn">
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
     </div>
     <!--//modal window  -->
+    <!-- close btn -->
+    <div id="closeBtn" class="close-btn">
+      <span class="close-btn"></span>
+      <span class="close-btn"></span>
+    </div>
 
-    <!-- <div id="foo"></div>
-    <script>
-      $(function(){
-        $("#foo").append("<h1>foo</h1>")
-        $("#foo").append("<h1>foo</h1>")
-        $("#foo").append("<h1>foo</h1>")
-      })
-    </script> -->
-
-    <!--  ポップアップ  -->
+    <!--  lity.js  -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/lity/1.6.6/lity.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/1.6.6/lity.js"></script>
-    <!--  ポップアップ  -->
-
+    <!--  //lity.js  -->
     <script src="./js/vanilla.js"></script>
   </body>
 </html>
