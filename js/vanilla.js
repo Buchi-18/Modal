@@ -2,23 +2,25 @@
 const videos = [
   {
     dataId: 0,
-    videoUrl: "./video/video_b_640*360.mp4",
+    date: "2023.02.05",
+    videoUrl: "./video/video_bronze_640×320.mp4",
     imgUrl: "./img/thumbnail-b.jpg",
-    alt: "サムネイル00",
-    title: "サムネイル00",
+    alt: "テスト動画-001",
+    title: "テスト動画-001",
   },
   {
     dataId: 1,
-    videoUrl: "./video/video_g_640*360.mp4",
+    date: "2023.01.24",
+    videoUrl: "./video/video_green_640×320.mp4",
     imgUrl: "./img/thumbnail-g.jpg",
-    alt: "サムネイル01",
-    title: "サムネイル01",
+    alt: "テスト動画-002",
+    title: "テスト動画-002",
   },
 ];
 
 const modalBg = document.querySelector(".modal-bg");
 const contentsWrap = document.getElementById("contentsWrap");
-const modal = document.getElementById("modal");
+const modal = document.getElementById("modalWindow");
 const videoLink = document.getElementById("videoLink");
 const imgLink = document.getElementById("imgLink");
 const closeBtn = document.getElementById("closeBtn");
@@ -28,6 +30,7 @@ videos.forEach(function (video) {
   const { dataId, imgUrl, alt, title } = video;
   contentsWrap.innerHTML += `
   <li class="content-cell" data-id=${dataId}>
+  <p class="thumbnail-title">${title}</p>
           <div>
             <img src=${imgUrl} alt=${alt} title=${title}/>
           </div>
@@ -62,11 +65,17 @@ function modalIsOpen(id) {
   modalBg.classList.add("open");
   modal.classList.remove("closed");
   modalBg.classList.remove("closed");
-  const { videoUrl, imgUrl, alt, title } = videos[id];
-  videoLink.setAttribute("href", videoUrl);
-  imgLink.setAttribute("src", imgUrl);
-  imgLink.setAttribute("alt", alt);
-  imgLink.setAttribute("alt", title);
+  const { date, videoUrl, imgUrl, alt, title } = videos[id];
+  document.getElementById("videoWrap").innerHTML =
+  ` <a id="videoLink" href="${videoUrl}" target="_blank" rel="noopener">
+  <p class="play-wrap">
+    <i class="fa-solid fa-circle-play"></i>
+    <img id="imgLink" src="${imgUrl}" alt="${alt}" title="${title}" />
+  </p>
+</a>
+<div class="content-description">
+  <p class="content-date">${date}</p>
+  <p class="content-title">${title}</p>`
 }
 //モーダルクローズメソッド
 function modalIsClose() {

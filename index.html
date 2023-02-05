@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modal</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/vanilla-js.css" />
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -15,131 +14,35 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- jquery-3.6.3 -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
-      integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo="
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
-    <h1 style="margin: 5% 0; text-align: center">MODAL SCRIPT</h1>
-    <!-- ********** ********** ********** -->
-    <!-- ********** Using lity ********** -->
-    <!-- ********** ********** ********** -->
-    <div id="usingLity" class="wrapper">
-      <h2 style="font-size: 1.5rem">Using Jquery & lity</h2>
-      <ul class="contents-wrap">
-        <li>
-          <p>
-            <a href="#01" data-lity="data-lity">
-              <div>
-                <img src="./img/thumbnail-b.jpg" alt="サムネイル" />
-              </div>
-            </a>
-          </p>
-          <div id="01" class="lity-hide">
-            <div class="content-space">
-              <div class="notes">
-                ※クリックすると再生が始まります。<br />
-                周囲の状況、音量にご注意ください。
-              </div>
-              <a
-                href="./video/video_b_640*360.mp4"
-                target="_blank"
-                rel="noopener"
-              >
-                <p class="play-wrap">
-                  <i class="fa-solid fa-circle-play"></i>
-                  <img src="./img/thumbnail-b.jpg" alt="サムネイル" />
-                </p>
-              </a>
-              <div class="content-description">
-                <p class="content-date">2023.01.24</p>
-                <p class="content-title">テスト動画テスト動画テスト動画</p>
-                <a href="./index.html"> TOPページ </a>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <p>
-            <a href="#02" data-lity="data-lity">
-              <div>
-                <img src="./img/thumbnail-g.jpg" alt="サムネイル" />
-              </div>
-            </a>
-          </p>
-          <div id="02" class="lity-hide">
-            <div class="content-space">
-              <div class="notes">
-                ※クリックすると再生が始まります。<br />
-                周囲の状況、音量にご注意ください。
-              </div>
-              <a
-                href="./video/video_g_640*360.mp4"
-                target="_blank"
-                rel="noopener"
-              >
-                <p class="play-wrap">
-                  <i class="fa-solid fa-circle-play"></i>
-                  <img src="./img/thumbnail-g.jpg" alt="サムネイル" />
-                </p>
-              </a>
-              <div class="content-description">
-                <p class="content-date">2023.01.24</p>
-                <p class="content-title">テスト動画テスト動画テスト動画</p>
-                <a href="./index.html"> TOPページ </a>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
     <!-- ********** ********** ********** -->
     <!-- ********** vanilla.js ********** -->
     <!-- ********** ********** ********** -->
     <!-- thumbnails  -->
     <div id="usingVanilla.js" class="wrapper">
-      <h2 style="font-size: 1.5rem">Using Vanilla.js</h2>
       <ul id="contentsWrap" class="contents-wrap"></ul>
     </div>
 
     <!-- modal window  -->
     <div class="modal-bg"></div>
-    <div id="modal">
+    <div id="modalWindow">
       <div class="content-space">
         <div class="notes">
           ※動画をクリックすると再生が始まります。<br />
           周囲の状況、音量にご注意ください。
         </div>
-        <a id="videoLink" href="" target="_blank" rel="noopener">
-          <p class="play-wrap">
-            <i class="fa-solid fa-circle-play"></i>
-            <img id="imgLink" src="" alt="サムネイル" />
-          </p>
-        </a>
-        <div class="content-description">
-          <p class="content-date">2023.01.24</p>
-          <p class="content-title">テスト動画テスト動画テスト動画</p>
-          <a href="./index.html"> TOPページ </a>
-        </div>
+        <div id="videoWrap"></div>
+      </div>
+      <!-- close btn -->
+      <div id="closeBtn" class="close-btn">
+        <span class="close-btn"></span>
+        <span class="close-btn"></span>
       </div>
     </div>
-    <!--//modal window  -->
-    <!-- close btn -->
-    <div id="closeBtn" class="close-btn">
-      <span class="close-btn"></span>
-      <span class="close-btn"></span>
-    </div>
 
-    <!--  lity.js  -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/lity/1.6.6/lity.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/1.6.6/lity.js"></script>
-    <!--  //lity.js  -->
+    <!--//modal window  -->
+
     <script src="./js/vanilla.js"></script>
   </body>
 </html>
