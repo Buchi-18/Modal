@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modal</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <!-- font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <!-- ********** ********** ********** -->
-    <!-- ********** vanilla.js ********** -->
-    <!-- ********** ********** ********** -->
-    <!-- thumbnails  -->
-    <div id="usingVanilla.js" class="wrapper">
-      <ul id="contentsWrap" class="contents-wrap"></ul>
-    </div>
 
-    <!-- modal window  -->
-    <div class="modal-bg"></div>
-    <div id="modalWindow">
-      <div class="content-space">
-        <div class="notes">
-          ※動画をクリックすると再生が始まります。<br />
-          周囲の状況、音量にご注意ください。
-        </div>
-        <div id="videoWrap"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>modal_vanilla</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- ********** ********** ********** -->
+  <!-- ********** vanilla.js ********** -->
+  <!-- ********** ********** ********** -->
+  <!-- thumbnails  -->
+  <div id="usingVanilla.js" class="wrapper">
+    <ul id="contentsWrap" class="contents-wrap"></ul>
+  </div>
+
+  <!-- modal window  -->
+  <div class="modal-bg"></div>
+  <div id="modalWindow">
+    <div class="content-space">
+      <div class="notes">
+        ※動画をクリックすると再生が始まります。<br />
+        周囲の状況、音量にご注意ください。
       </div>
-      <!-- close btn -->
-      <div id="closeBtn" class="close-btn">
-        <span class="close-btn"></span>
-        <span class="close-btn"></span>
-      </div>
+      <div id="videoWrap"></div>
     </div>
+    <!-- close btn -->
+    <div id="closeBtn" class="close-btn">
+      <span class="close-btn"></span>
+      <span class="close-btn"></span>
+    </div>
+  </div>
 
-    <!--//modal window  -->
+  <!--//modal window  -->
 
-    <script src="./js/vanilla.js"></script>
-  </body>
+  <script src="./js/vanilla.js"></script>
+</body>
+
 </html>
